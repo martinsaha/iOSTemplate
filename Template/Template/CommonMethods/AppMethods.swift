@@ -32,10 +32,7 @@ class AppMethods: NSObject {
             let needsConnection = flags.contains(.connectionRequired)
             return (isReachable && !needsConnection)
     }
-
 }
-
-
 
 extension UIViewController {
     func displayAlert(title: String, message: String, options: String..., completion: @escaping (Int) -> Void) {
@@ -47,7 +44,14 @@ extension UIViewController {
         }
         self.present(alertController, animated: true, completion: nil)
     }
-    func dismisssAlert(){
+
+    func startActivity(){
+        self.view.makeToastActivity(.center)
+        self.view.isUserInteractionEnabled = false
     }
 
+    func stopActivity(){
+        self.view.hideToastActivity()
+        self.view.isUserInteractionEnabled = true
+    }
 }

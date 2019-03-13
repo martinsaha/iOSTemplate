@@ -9,8 +9,20 @@
 import Foundation
 
 struct StringConstant {
-
     public static let shared = StringConstant()
+    static let okString = "OK"
+    static let cancelString = "Cancel"
+
+}
+
+struct AlertConstants {
+    public static let shared = AlertConstants()
+
+    static let noData = "No data"
+}
+
+struct ErrorConstants {
+    public static let shared = ErrorConstants()
 
     static let internetError = "Please check your internet connectivity"
     static let internetSuccess = "Internet Connection available"
@@ -23,11 +35,4 @@ struct StringConstant {
 
     static let invalidEmail = "Email is not valid"
     static let emptyEmail = "Email is empty"
-
-
-
-
-
-
-
 }
